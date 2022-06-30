@@ -1,0 +1,65 @@
+{% extends 'app/base.htm' %}
+{% load static %}
+{% block base %}
+
+    <!-- carrusel-->
+    <div id="carouselExampleInterval" class="my-slider">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'app/img/spark.webp' %}" class="d-block w-100" alt="..." style="width: 1580px;height: 800px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cambio de motor</h5>
+                    <p>Informese de los cambios realizados a este precioso auto.</p>
+                    <a href="#">Visitar</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'app/img/mecanico2.jpg' %}" class="d-block w-100" alt="..." style="width: 1580px;height: 800px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Revision y cambio de frenos</h5>
+                    <p>Impresionante cambio de frenos.</p>
+                    <a href="#">Visitar</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{% static 'app/img/mecanico3.jpg' %}" class="d-block w-100" alt="... " style="width: 1580px;height: 800px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Revision tecnica</h5>
+                    <p>Impactante revision tecnica a este auto.</p>
+                    <a href="#">Visitar</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Mecanicos -->
+    <div class="text" style="text-align: center;background-color: black;">
+        <h2 style="color: white;">Nuestros Mecanicos</h2>
+        <div class="row">
+            <div class="col-6">
+                <a href="{% url 'SEBA' %}">
+                    <img style="width: 50%;height: 85%;border-radius: 50%;" src="{% static 'app/img/sebastian.jpg' %}" alt="...">
+                </a>
+                <h3 style="color: white;">Sebastian</h3>
+            </div>
+            <div class="col-6">
+                <a href="{% url 'CRIS' %}">
+                    <img style="width: 50%;height: 85%;border-radius: 50%;" src="{% static 'app/img/cristian.jpg' %}" alt="...">
+                </a>
+                <h3 style="color: white;">Cristian</h3>
+
+            </div>
+        </div>
+
+{% endblock %}

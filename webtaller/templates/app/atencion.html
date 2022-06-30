@@ -1,0 +1,24 @@
+{% extends 'app/base.htm' %}
+{% load static %}
+{% block base %}
+<h2>Atenciones</h2>
+<div class="atenciones">
+    {% for a in atenciones %}
+    <div class="atencion">
+        <div class="contenedor_atencion">
+            {% if a.imagen %}
+            <img src="{{ a.imagen.url }}" alt="imagen atencion">
+            {% endif %}
+            <img src="" alt="">
+            <div class="detalle">
+                <h4>Atencion: {{ a.tipoate | capfirst }}</h4>
+                <h5>{{ a.categoria | title }}</h5>
+                <h6>{{ a.descripcion | capfirst }}</h6>
+                <h6>({{ a.comentario | capfirst }})</h6>
+                <hr><hr><hr>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'app/base.htm' %}
+{% load static %}
+{% block base %}
+
+
+    <div class="texto">
+        <img src="{% static 'app/img/auto_cristian_5.jpg' %}" style="float: left; padding-right: 10px; width: 800px; height: auto;">
+        <p>Auto con severas fallas en los frenos</p>
+        <p>Atendido por Cristian Muñoz</p>
+        <p>18/5/2020</p>
+        <p>En este trabajo se usó Gato hidráulico, caballete para autos, llave de cruz para ruedas, separador de pastillas de freno, juego de llaves Allen, pinza para freno de mano, y kit reposicionador de pistones de freno</p>
+        <a href="{% url 'index' %}">Volver al inicio</a>
+    </div>
+
+{% endblock %}
